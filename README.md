@@ -40,3 +40,18 @@ Gorazd Miloshoski 245005
 
 
 
+### 5. Тест случаи според критериумот Every statement за searchBookByTitle
+
+| | test 1 | test 2 | test 3 |
+| :--- | :---: | :---: | :---: |
+| title == null \|\| title.isEmpty() | \* | | |
+| throw new IllegalArgumentException(...) | \* | | |
+| for (Book book : books) | | \* | \* |
+| book.getTitle().equalsIgnoreCase(title) | | \* | \* |
+| return book; | | \* | |
+| return null; | | | \* |
+
+Минимален број на тест случаи за оваа функција според Every statement критериумот е 3.
+
+
+
