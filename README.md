@@ -42,7 +42,7 @@ Gorazd Miloshoski 245005
 
 ### Тест случаи од критериумот Every statement за searchBookByTitle
 
-| | test 1 | test 2 | test 3 |
+| Uslov kod | test 1 | test 2 | test 3 |
 | :--- | :---: | :---: | :---: |
 | title == null \|\| title.isEmpty() | \* | | |
 | throw new IllegalArgumentException(...) | \* | | |
