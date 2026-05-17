@@ -4,46 +4,34 @@ Gorazd Miloshoski 245005
 <img width="781" height="661" alt="slika1si drawio" src="https://github.com/user-attachments/assets/161302d9-8167-4d46-8236-46e9769e32e4" />
 <img width="746" height="801" alt="Dijagram2 drawio" src="https://github.com/user-attachments/assets/d56ee398-eca9-41de-a96f-35c4c1eb58f4" />
 
-Ciklomatskata kompleksnost za vtorata funkcija iznesuva 5. Ovaa vrednost ja presmetav so formulata P + 1, kade што P go pretstavuva brojot na predikatni jazli. Vo ovoj primer ima 4 predikatni jazli, pa kompleksnosta e:
+Цикломатска комплексност
+Одредувањето на цикломатската комплексност е направено со помош на анализа на одлучувачките (предикатни) јазли во кодот, каде што извршувањето на програмата се разгранува во две различни насоки. За таа цел се користи стандардната математичка формула:
 
-V = 4 + 1 = 5
+V(G)=P+1
+(каде што P го претставува вкупниот број на предикатни јазли).
 
-Test sluchai za kriteriumot Every Statement
+Пресметка за searchBookByTitle:
+Кај оваа функција се идентификувани точно два предикатни јазли од кои текот продолжува во две алтернативни патеки. Тоа се:
 
-Za da se pokrijat site naredbi vo funkcijata, potrebni se minimum 3 test primeri.
+Првиот if условен блок (проверка за празен наслов).
 
-Prviot primer e koga kako vlez se prakja prazen string. Vo toj sluchaj funkcijata frla iskluchok poradi nevaliden naslov.
-Vtoriot primer e koga vo bibliotekata postoi kniga so dadeniot naslov i taa ne e iznajmena. Togaš knigata uspešno se dodava vo listata results.
-Tretiot primer e koga se bara kniga shto ne postoi vo bibliotekata. Vo toj sluchaj пребарувањето ne vrakja rezultat i se aktivira iskluchok za nenajdena kniga.
+Последниот if блок (проверка дали листата со резултати е празна).
 
-Test sluchai za kriteriumot Every Branch
+Со примена на формулата се добива:
 
-Za pokrivanje na site grananja vo funkcijata se potrebni 4 test primeri.
+V(G)=2+1=3
+Заклучок: Цикломатската комплексност за оваа метода изнесува 3.
 
-Prviot test e so prazen string, pri shto uslovot za validacija vrakja true i se frla iskluchok.
-Vtoriot test e koga knigata postoi i ne e iznajmena. Funkcijata gi pominuva site proverki i vrakja rezultat.
-Tretiot test e koga knigata postoi, no e vekje iznajmena. Vo toj sluchaj uslovot za dostupnost ne se ispolnuva i knigata ne se dodava vo rezultatite.
-Chetvrtiot test e koga vo bibliotekata nema kniga so baraniot naslov. Ciklusot zavrshuva bez pronajden rezultat i se frla RuntimeException("Book not found").
+Пресметка за borrowBook:
+Кај оваа метода, програмата се разгранува на вкупно три клучни точки каде што се донесува одлука за понатамошниот тек. Станува збор за следните предикати:
 
-Test sluchai za kriteriumot Multiple Condition
+Почетната if проверка (дали параметрите за наслов или автор се празни празни текстуални низи).
 
-Za uslovot:
+Контролната структура на for циклусот (која одлучува дали ќе продолжи итерацијата или ќе се излезе од циклусот).
 
-if (title.isEmpty() || author.isEmpty())
+Внатрешниот if условен оператор (со кој се проверува статусот на книгата, односно дали е веќе подигната).
 
-potrebni se 3 kombinacii:
+Со примена на формулата се добива:
 
-TRUE || TRUE – se frla iskluchok бидејќи dvata uslovi se vistiniti.
-TRUE || FALSE – dovolno e prviot uslov da e vistinit za da se frli iskluchok.
-FALSE || TRUE – i vo ovoj sluchaj se frla iskluchok.
-FALSE || FALSE – funkcijata prodolzhuva so izvrshuvanje.
-
-Za uslovot:
-
-if (book.getTitle().equalsIgnoreCase(title) && !book.isBorrowed())
-
-isto taka se dovolni 3 kombinacii:
-
-TRUE && TRUE – uslovot e ispolnet i funkcijata prodolzhuva vo naredniot del.
-TRUE && FALSE – naslovot se sovpagja, no knigata e iznajmena, pa uslovot ne se ispolnuva.
-FALSE && * – naslovot ne odgovara i nema potreba da se proveruva vtoriot del od uslovot.
+V(G)=3+1=4
+Заклучок: Цикломатската комплексност за оваа метода изнесува 4.
