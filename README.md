@@ -1,1 +1,1 @@
-# SI_2026_lab2_245005
+Gorazd Miloshoski 245005
