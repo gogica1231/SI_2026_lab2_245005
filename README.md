@@ -4,7 +4,7 @@ Gorazd Miloshoski 245005
 <img width="781" height="661" alt="slika1si drawio" src="https://github.com/user-attachments/assets/161302d9-8167-4d46-8236-46e9769e32e4" />
 <img width="746" height="801" alt="Dijagram2 drawio" src="https://github.com/user-attachments/assets/d56ee398-eca9-41de-a96f-35c4c1eb58f4" />
 
-Цикломатска комплексност. 
+### Цикломатска комплексност. 
 
      Комплексноста е пресметана преку бројот на предикатни јазли (места каде што кодот се дели на две патеки) со формулата:
      
@@ -40,7 +40,7 @@ Gorazd Miloshoski 245005
 
 
 
-### 5. Тест случаи според критериумот Every statement за searchBookByTitle
+### Тест случаи за критериумот Every statement за searchBookByTitle
 
 | | test 1 | test 2 | test 3 |
 | :--- | :---: | :---: | :---: |
@@ -51,7 +51,6 @@ Gorazd Miloshoski 245005
 | return book; | | \* | |
 | return null; | | | \* |
 
-Минимален број на тест случаи за оваа функција според Every statement критериумот е 3.
-
+За да ги поминеме сите линии код со Every Statement ни требаат најмалку 3 теста.
 
 
