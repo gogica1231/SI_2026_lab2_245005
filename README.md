@@ -53,4 +53,31 @@ Gorazd Miloshoski 245005
 
 За да ги поминеме сите линии код со Every Statement ни требаат најмалку 3 теста.
 
+### Тест случаи според критериумот Every branch за borrowBook
+
+| Гранки / Услови во кодот | test 1 | test 2 | test 3 | test 4 |
+| :--- | :---: | :---: | :---: | :---: |
+| if (title.isEmpty() \|\| author.isEmpty()) [True] | \* | | | |
+| if (title.isEmpty() \|\| author.isEmpty()) [False] | | \* | \* | \* |
+| if (getTitle().equals... && getAuthor().equals...) [True] | | \* | \* | |
+| if (getTitle().equals... && getAuthor().equals...) [False] | | | | \* |
+| if (!book.isBorrowed()) [True] | | \* | | |
+| if (!book.isBorrowed()) [False] | | | \* | |
+| Крај на циклус (throw new RuntimeException("Book not found")) | | | | \* |
+
+Минимален број на тест случаи за оваа функција според Every branch критериумот е 4.
+
+---
+
+### Тест случаи според критериумот Multiple condition
+
+| име на функција | test |
+| :--- | :--- |
+| TT | test за TT |
+| TF | test за TF |
+| FT | test за FT |
+| FF | test за FF |
+
+Минимален број на тест случаи за оваа функција според Multiple condition критериумот е 4.
+
 
